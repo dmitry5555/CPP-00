@@ -6,14 +6,16 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:58:30 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/05 16:47:41 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:45:56 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-int main() {
+
+int main()
+{
 	int index;
 	std::string cmd;
 	std::string index_str;
@@ -28,6 +30,10 @@ int main() {
 	{
 		std::cout << "Enter ADD / SEARCH / EXIT" << std::endl;
 		std::getline(std::cin, cmd);
+		// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+
+
 		if (cmd == "ADD")
 		{
 			std::cout << "first name" << std::endl;
@@ -41,7 +47,18 @@ int main() {
 				std::getline(std::cin, t3);
 			std::cout << "phone number" << std::endl;
 			while (t4.length() <= 0)
+			{
 				std::getline(std::cin, t4);
+				for (std::string::iterator it = t4.begin(); it != t4.end(); ++it)
+				{
+					if (!std::isdigit(*it))
+					{
+						std::cout << "wrong number" << std::endl;
+						t4.clear();
+						break;
+					}
+				}
+			}
 			std::cout << "darkest secret" << std::endl;
 			while (t5.length() <= 0)
 				std::getline(std::cin, t5);
@@ -68,6 +85,11 @@ int main() {
 		}
 		if (cmd == "EXIT")
 			return(0);
+		if (std::cin.eof())
+		{
+			std::cout << "Exiting" << std::endl;
+			break;
+		}
 	}
 	return(0);
 }
