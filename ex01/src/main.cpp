@@ -6,7 +6,7 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:58:30 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/04 16:22:24 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/05 16:47:41 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,20 @@ int main() {
 		if (cmd == "ADD")
 		{
 			std::cout << "first name" << std::endl;
-			std::getline(std::cin, t1);
+			while (t1.length() <= 0)
+				std::getline(std::cin, t1);
 			std::cout << "last name" << std::endl;
-			std::getline(std::cin, t2);
+			while (t2.length() <= 0)
+				std::getline(std::cin, t2);
 			std::cout << "nickname" << std::endl;
-			std::getline(std::cin, t3);
+			while (t3.length() <= 0)
+				std::getline(std::cin, t3);
 			std::cout << "phone number" << std::endl;
-			std::getline(std::cin, t4);
+			while (t4.length() <= 0)
+				std::getline(std::cin, t4);
 			std::cout << "darkest secret" << std::endl;
-			std::getline(std::cin, t5);
+			while (t5.length() <= 0)
+				std::getline(std::cin, t5);
 			myBook.addContact(new Contact(t1,t2,t3,t4,t5));
 		}
 		if (cmd == "SEARCH")
