@@ -6,14 +6,14 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:45:02 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/04 16:22:47 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:44:02 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(const std::string& t1, const std::string& t2, const std::string& t3, const std::string& t4, const std::string& t5)
-	: fname(t1), lname(t2), nname(t3), pnum(t4), dsec(t5) {
+Contact::Contact(const std::string& fname, const std::string& lname, const std::string& nname, const std::string& pnum, const std::string& dsec)
+	: fname(fname), lname(lname), nname(nname), pnum(pnum), dsec(dsec) {
 }
 
 void Contact::printFname() {

@@ -6,7 +6,7 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:07:51 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/04 16:22:39 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:43:41 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class PhoneBook {
 	public:
 		PhoneBook();
 		~PhoneBook();
-		void addContact(Contact* newContact);
+		void addContact();
 		void searchContact(int index);
 };
 

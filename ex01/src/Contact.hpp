@@ -6,7 +6,7 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:07:06 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/04 16:08:52 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:44:00 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Contact {
 		std::string dsec;
 
 	public:
-		Contact(const std::string& t1, const std::string& t2, const std::string& t3, const std::string& t4, const std::string& t5);
+		Contact(const std::string& fname, const std::string& lname, const std::string& nname, const std::string& pnum, const std::string& dsec);
 		~Contact();
 		void printFname();
 		void tenPrint(std::string val, int is_pipe);

@@ -6,7 +6,7 @@
 /*   By: dlariono <dlariono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:58:30 by dmitrylario       #+#    #+#             */
-/*   Updated: 2023/11/05 17:45:56 by dlariono         ###   ########.fr       */
+/*   Updated: 2023/11/06 16:09:33 by dlariono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,51 +19,15 @@ int main()
 	int index;
 	std::string cmd;
 	std::string index_str;
-	std::string t1;
-	std::string t2;
-	std::string t3;
-	std::string t4;
-	std::string t5;
 	PhoneBook myBook;
 
 	while(1)
 	{
 		std::cout << "Enter ADD / SEARCH / EXIT" << std::endl;
 		std::getline(std::cin, cmd);
-		// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-
 
 		if (cmd == "ADD")
-		{
-			std::cout << "first name" << std::endl;
-			while (t1.length() <= 0)
-				std::getline(std::cin, t1);
-			std::cout << "last name" << std::endl;
-			while (t2.length() <= 0)
-				std::getline(std::cin, t2);
-			std::cout << "nickname" << std::endl;
-			while (t3.length() <= 0)
-				std::getline(std::cin, t3);
-			std::cout << "phone number" << std::endl;
-			while (t4.length() <= 0)
-			{
-				std::getline(std::cin, t4);
-				for (std::string::iterator it = t4.begin(); it != t4.end(); ++it)
-				{
-					if (!std::isdigit(*it))
-					{
-						std::cout << "wrong number" << std::endl;
-						t4.clear();
-						break;
-					}
-				}
-			}
-			std::cout << "darkest secret" << std::endl;
-			while (t5.length() <= 0)
-				std::getline(std::cin, t5);
-			myBook.addContact(new Contact(t1,t2,t3,t4,t5));
-		}
+			myBook.addContact();
 		if (cmd == "SEARCH")
 		{
 			std::cout << "enter contact's index " << std::endl;
@@ -90,6 +54,7 @@ int main()
 			std::cout << "Exiting" << std::endl;
 			break;
 		}
+
 	}
 	return(0);
 }
